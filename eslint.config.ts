@@ -7,7 +7,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -18,6 +18,10 @@ export default [
       },
     },
     settings: { react: { version: '18.3' } },
+    extends: [
+      "standard-with-typescript",
+      "plugin:react/recommended"
+    ],
     plugins: {
       react,
       'react-hooks': reactHooks,

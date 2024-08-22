@@ -1,8 +1,15 @@
-import {useEffect, useState} from 'react'
-import './App.css'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function App() {
-  const [demos, setDemos] = useState()
+type Demo = {
+  id: number
+  name: string
+}
+
+const Demos = () => {
+  const navigate = useNavigate()
+
+  const [demos, setDemos] = useState<Demo[]>()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,11 +27,11 @@ function App() {
       {demos && demos.map(demo => (
         <div key={demo.id} className="card">
           <h2>{demo.name}</h2>
-          <button>Visualizar</button>
+          <button onClick={() => {}}>Visualizar</button>
         </div>
       ))}
     </div>
   )
 }
 
-export default App
+export default Demos
