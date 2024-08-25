@@ -52,7 +52,7 @@ Frame.init(
 Demo.hasMany(Frame, {as: 'frames', foreignKey: 'demoId'})
 Frame.belongsTo(Demo, {as: 'demo', foreignKey: 'demoId'})
 
-module.exports = {
+export {
   sequelize,
   Demo,
   Frame,
