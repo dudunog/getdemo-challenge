@@ -5,6 +5,7 @@ export type FrameProps = {
   createdAt: string;
   updatedAt: string;
   demoId: string;
+  image: string;
 };
 
 /**
@@ -37,6 +38,10 @@ export class Frame {
 
   get demoId() {
     return this.props.demoId;
+  }
+
+  get image() {
+    return this.props.image;
   }
 
   constructor(readonly props: FrameProps) {}

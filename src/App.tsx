@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import { Router } from '@/shared/components'
 import { Provider } from 'react-redux';
 import { store } from '@/shared/store';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function App() {
   return (
